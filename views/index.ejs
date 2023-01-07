@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Welcome to <%= title %></h1>
+
+    <div>
+      <% locals.messages.forEach(message => { %>
+      <h2><%= message.user %>: <%= message.text %></h2>
+      <p>date: <%= message.added %></p>
+
+      <% }) %>
+    </div>
+  </body>
+</html>
